@@ -1,3 +1,20 @@
+def print_star(n):
+    for star in range(1, n, 2):
+        print(((star * "*")+(4 * " ")+(star * "*")+(4 * " ")+(star * "*")).center(23))
+    for star in range(1, n, 2):
+        print(((star * "*")+(2 * " ")+(star * "*")+(2 * " ")+(star * "*")).center(23))
+    for star in range(1, n, 2):
+        print((star * "*").center(23))
+    for star in range(1, n, 2):
+        print((6 * "* ").center(23))
+    for star in range(1, n, 2):
+        print((star * "*").center(23))
+    for star in range(1, n, 2):
+        print(((star * "*")+(2 * " ")+(star * "|")+(2 * " ")+(star * "*")).center(23))
+    for star in range(1, n, 2):
+        print(((star * "*")+(4 * " ")+(star * "|")+(4 * " ")+(star * "*")).center(23))
+print_star(2)
+
 def print_tree(n1, n2, n3, n4):
     for tree in range(1, n1, 2):
         print((tree * "*").center(23))
