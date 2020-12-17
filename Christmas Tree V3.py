@@ -5,9 +5,14 @@ def print_tree(n1, n2, n3):
         print((size * "*").center(23))
     for size in range(5, n3, 6):
         print((size * "*").center(23))
-print_tree(8, 16, 23)
+print_tree(8, 16, 24)
 
-def print_trunk(n):
-    for size in range(n):
-        print((5 * "*").center(23))
-print_trunk(3)
+def print_trunk(n1, n2, n3):
+    for size in range(5, n1, 20):
+        print(((4 * "| ")+(5 * "*")+(4 * " |")).center(23))
+    for size in range(5, n2, 20):
+        print(((4 * "0 ")+(5 * "*")+(4 * " 0")).center(23))
+    for size in range(5, n3, 20):
+        print((5* "*").center(23))
+        
+print_trunk(20, 20, 20)

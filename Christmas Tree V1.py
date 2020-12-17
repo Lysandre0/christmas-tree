@@ -5,4 +5,4 @@ def print_tree(n1, n2, n3):
         print((size * "*").center(23))
     for size in range(5, n3, 6):
         print((size * "*").center(23))
-print_tree(8, 16, 23)
+print_tree(8, 16, 24)
