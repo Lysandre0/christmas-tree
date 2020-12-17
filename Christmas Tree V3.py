@@ -14,5 +14,4 @@ def print_trunk(n1, n2, n3):
         print(((4 * "0 ")+(5 * "*")+(4 * " 0")).center(23))
     for size in range(5, n3, 20):
         print((5* "*").center(23))
-        
 print_trunk(20, 20, 20)
