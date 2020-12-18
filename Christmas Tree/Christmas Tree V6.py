@@ -7,9 +7,9 @@
 toplevel = int(input("Entrez la taille du premier étage : "))
 middlelevel = int(input("Entrez la taille du second étage : "))
 bottomlevel = int(input("Entrez la taille du troisième étage : "))
-topgarlands = int((toplevel)//2.6)
-middlegarlands = int((middlelevel)//2.6)
-bottomgarlands = int((bottomlevel - 5)//4)
+topgarlands = int(((toplevel//2.5)-1)*1.14)
+middlegarlands = int(((middlelevel//2.5)-1)*1.14)
+bottomgarlands = int((bottomlevel - 5)//4 - 1)
 
 """
 Star Function (Cette fonction décrit la forme de l'étoile du sapin de Noël)
@@ -42,11 +42,11 @@ def print_tree(n1, n2, n3, n4):
 Trunk Function (Cette fonction décrit la taille du tronc du sapin de Noël)
 """
 def print_trunk(n):
-    for trunk in range(5, n, 20):
+    for size in range(5, n, 20):
         print((((bottomgarlands * "| ")+(5 * "*")+(bottomgarlands * " |")).center(bottomlevel)))
-    for trunk in range(5, n, 20):
+    for size in range(5, n, 15):
         print(((bottomgarlands * "0 ")+(5 * "*")+(bottomgarlands * " 0")).center(bottomlevel))
-    for trunk in range(5, n, 20):
+    for size in range(5, n, 20):
         print((5* "*").center(bottomlevel))
 
 print_star()      
