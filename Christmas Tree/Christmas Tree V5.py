@@ -5,8 +5,10 @@ Lysandre LE BIGOT et Jérémy BARRE
 17/12/2020
 Python 3.7.9 (64-bit)
 """
+"""
 INPUT: 
 OUTPUT:Une chaine de symbole représentant l'étoile de la mort
+"""
 """
 Star Function (Cette fonction décrit la forme de l'étoile du sapin de Noël)
 """

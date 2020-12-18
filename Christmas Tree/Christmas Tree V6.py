@@ -11,7 +11,6 @@ toplevel = int(input("Entrez la taille du premier étage : "))
 middlelevel = int(input("Entrez la taille du second étage : "))
 #middlelevel prend en paramètre la taille du 2ème étages
 bottomlevel = int(input("Entrez la taille du troisième étage : "))
-<<<<<<< HEAD
 #bottomlevel prend en paramètre la taille du 3ème étages
 topgarlands = int(((toplevel//2.5)-1)*1.14)
 #topgarlands est un calcul configurant les boules du 1ère étage
@@ -20,11 +19,6 @@ middlegarlands = int(((middlelevel//2.5)-1)*1.14)
 bottomgarlands = int((bottomlevel - 5)//4 - 1)
 #bottomgarlands est un calcul configurant la guirlande du 3ème étages
 
-=======
-topgarlands = int(((toplevel//2.5)-1.5)*1.14)
-middlegarlands = int(((middlelevel//2.5)-2)*1.14)
-bottomgarlands = int((bottomlevel - 6)//4)
->>>>>>> eb7b7e001789b24ad0e44c76b33cd9724c22f7c2
 
 """
 INPUT: 

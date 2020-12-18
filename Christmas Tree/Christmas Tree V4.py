@@ -15,10 +15,10 @@ def tree(n1, n2, n3, n4):
         print((size * "*").center(23))
     for size in range(1, n2, 2):
         print(((size * "0")+(1 * " ")+(3 * "*")+(1 * " ")+(size * "0")).center(23))
-    for size in range(1, n2, 2):
-        print(((size * "0")+(4 * " ")+(5 * "*")+(4 * " ")+(size * "0")).center(23))
     for size in range(7, n3, 4):
         print((size * "*").center(23))
+    for size in range(1, n2, 2):
+        print(((size * "0")+(4 * " ")+(5 * "*")+(4 * " ")+(size * "0")).center(23))
     for size in range(11, n4, 6):
         print((size * "*").center(23))
 tree(8, 2, 16, 24)
