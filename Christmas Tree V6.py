@@ -27,16 +27,16 @@ def print_star():
 Tree Function (Cette fonction décrit la taille des branches du sapin de Noël)
 """
 def print_tree(n1, n2, n3, n4):
-    for size in range(1, n1, 2):
-        print((size * "*").center(bottomlevel))
-    for size in range(1, n2, 2):
-        print(((size * "0")+(topgarlands * " ")+(3 * "*")+(topgarlands * " ")+(size * "0")).center(bottomlevel))
-    for size in range(7, n3, 4):
-        print((size * "*").center(bottomlevel))
-    for size in range(1, n2, 2):
-        print(((size * "0")+(middlegarlands * " ")+(5 * "*")+(middlegarlands * " ")+(size * "0")).center(bottomlevel))
-    for size in range(11, n4, 6):
-        print((size * "*").center(bottomlevel))
+    for tree in range(1, n1, 2):
+        print((tree * "*").center(bottomlevel))
+    for tree in range(1, n2, 2):
+        print(((tree * "0")+(topgarlands * " ")+(3 * "*")+(topgarlands * " ")+(tree * "0")).center(bottomlevel))
+    for tree in range(7, n3, 4):
+        print((tree * "*").center(bottomlevel))
+    for tree in range(1, n2, 2):
+        print(((tree * "0")+(middlegarlands * " ")+(5 * "*")+(middlegarlands * " ")+(tree * "0")).center(bottomlevel))
+    for tree in range(11, n4, 6):
+        print((tree * "*").center(bottomlevel))
 
 """
 Trunk Function (Cette fonction décrit la taille du tronc du sapin de Noël)

@@ -4,6 +4,9 @@
 INPUT: 3 entier n1,n2,n3
 OUTPUT:Une chaine de symbole représentant un morceau du sapin
 
+
+//.center permet de centrer la fenêtre
+
 PROCEDURE print_tree(n1,n2,n3)
 
 	VAR 
@@ -11,7 +14,7 @@ PROCEDURE print_tree(n1,n2,n3)
 
 	BEGIN
 		FOR size <-- 1 TO n1 DO
-			print ((size * "*").center(23));
+			print ((size * "*").center(23)); 
 			size += 2;
 		FOR size <-- 3 TO n2 DO
 			print ((size * "*").center(23));
