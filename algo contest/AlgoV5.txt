@@ -1,10 +1,8 @@
 //Projet arbre de noël
 // Réalisé par Jérémy BARRÉ et Lysandre LE BIGOT
 
-INPUT: 4 entier n1,n2,n3,n4
-OUTPUT:Une chaine de symbole représentant les trois partis du sapin ainsi que les boules
-
-//.center permet de centrer la fenêtre
+INPUT: 
+OUTPUT:Une chaine de symbole représentant l'étoile de la mort
 
 
 PROCEDURE print_star()
@@ -20,12 +18,17 @@ PROCEDURE print_star()
    	print((1 * "*").center(23))
    	print(((1 * "*")+(2 * " ")+(1 * "|")+(2 * " ")+(1 * "*")).center(23))
   	print(((1 * "*")+(4 * " ")+(1 * "|")+(4 * " ")+(1 * "*")).center(23))
-
-		
+	
 	END
 
 
+INPUT: 4 entier n1,n2,n3,n4
+OUTPUT:Une chaine de symbole représentant les trois partis du sapin ainsi que les boules
+
+//.center permet de centrer la fenêtre
+
 PROCEDURE print_tree(n1,n2,n3,n4)
+
 	VAR	
 
 	BEGIN	
@@ -48,8 +51,9 @@ PROCEDURE print_tree(n1,n2,n3,n4)
 
 	END
 
+INPUT: 4 entier n1,n2,n3
+OUTPUT:Une chaine de symbole représentant le tronc avec les guirlandes
 
-print_tree(8, 2, 16, 24)
 
 PROCEDURE print_trunk(n1,n2,n3)
 
@@ -69,4 +73,6 @@ PROCEDURE print_trunk(n1,n2,n3)
 
 	END
 
+print_star()
+print_tree(8, 2, 16, 24)
 print_trunk(20,20,20)

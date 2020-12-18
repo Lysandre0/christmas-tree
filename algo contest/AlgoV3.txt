@@ -27,7 +27,7 @@ PROCEDURE print_tree(n1,n2,n3)
 print_tree(8,16,24)
 
 INPUT: 3 entier n1,n2,n3
-OUTPUT:Une chaine de symbole représentant les trois partis du sapin ainsi que les guiralandes
+OUTPUT:Une chaine de symbole représentant les trois partis du sapin ainsi que les guirlandes
 
 PROCEDURE print_trunk(n1,n2,n3)
 

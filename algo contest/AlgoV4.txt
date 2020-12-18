@@ -32,6 +32,10 @@ PROCEDURE print_tree(n1,n2,n3,n4)
 
 print_tree(8, 2, 16, 24)
 
+
+INPUT: 3 entier n1,n2,n3
+OUTPUT:Une chaine de symbole représentant le tronc avec les guirlandes
+
 PROCEDURE print_trunk(n1,n2,n3)
 
 	VAR
