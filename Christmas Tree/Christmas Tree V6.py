@@ -7,9 +7,9 @@
 toplevel = int(input("Entrez la taille du premier étage : "))
 middlelevel = int(input("Entrez la taille du second étage : "))
 bottomlevel = int(input("Entrez la taille du troisième étage : "))
-topgarlands = int(((toplevel//2.5)-1)*1.14)
-middlegarlands = int(((middlelevel//2.5)-1)*1.14)
-bottomgarlands = int((bottomlevel - 5)//4 - 1)
+topgarlands = int(((toplevel//2.5)-1.5)*1.14)
+middlegarlands = int(((middlelevel//2.5)-2)*1.14)
+bottomgarlands = int((bottomlevel - 6)//4)
 
 """
 Star Function (Cette fonction décrit la forme de l'étoile du sapin de Noël)
