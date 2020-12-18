@@ -2,12 +2,12 @@
 // Réalisé par Jérémy BARRÉ et Lysandre LE BIGOT
 
 INPUT: 3 entier n1,n2,n3
-OUTPUT:Une chaine de symbole représentant un morceau du sapin
+OUTPUT:Une chaine de symbole représentant les 3 étages du sapin
 
 
 //.center permet de centrer la fenêtre
 
-PROCEDURE print_tree(n1,n2,n3)
+FUNCTION tree(n1,n2,n3)
 
 	VAR 
 	
@@ -15,13 +15,13 @@ PROCEDURE print_tree(n1,n2,n3)
 	BEGIN
 		FOR size <-- 1 TO n1 DO
 			print ((size * "*").center(23)); 
-			size += 2;
+			size <-- size + 2;
 		FOR size <-- 3 TO n2 DO
 			print ((size * "*").center(23));
-			size += 4;
+			size <-- size + 4;
 		FOR size <-- 5 TO n3 DO
 			print ((size * "*").center(23));
-			size += 6;
+			size <-- size + 6;
 	END
 
-print_tree(8,16,24)
+tree(8,16,24)

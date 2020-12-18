@@ -1,11 +1,19 @@
 //Projet arbre de noël
 // Réalisé par Jérémy BARRÉ et Lysandre LE BIGOT
 
+toplevel = int(input("Entrez la taille du premier étage : ")) 	//toplevel prend en paramètre la taille du 1er étage
+middlelevel = int(input("Entrez la taille du second étage : "))		//middlelevel prend en paramètre la taille du 2ème étages
+bottomlevel = int(input("Entrez la taille du troisième étage : "))		//bottomlevel prend en paramètre la taille du 3ème étages
+topgarlands = int(((toplevel//2.5)-1)*1.14)	//topgarlands est un calcul configurant les boules du 1ère étage
+middlegarlands = int(((middlelevel//2.5)-1)*1.14)	//middlegarlands est un calcul configurant les boules du 2ème étages
+bottomgarlands = int((bottomlevel - 5)//4 - 1)	//bottomgarlands est un calcul configurant la guirlande du 3ème étages
+
 INPUT: 
 OUTPUT:Une chaine de symbole représentant l'étoile de la mort
 
+//.center permet de centrer la fenêtre
 
-PROCEDURE print_star()
+FUNCTION star()
 
 	VAR
 
@@ -25,9 +33,9 @@ PROCEDURE print_star()
 INPUT: 4 entier n1,n2,n3,n4
 OUTPUT:Une chaine de symbole représentant les trois partis du sapin ainsi que les boules
 
-//.center permet de centrer la fenêtre
 
-PROCEDURE print_tree(n1,n2,n3,n4)
+
+FUNCTION tree(n1,n2,n3,n4)
 
 	VAR	
 
@@ -35,19 +43,19 @@ PROCEDURE print_tree(n1,n2,n3,n4)
 
    		 FOR size <--1 TO n1 DO
       		  	print((size * "*").center(bottomlevel));
-			size += 1;
- 		 FOR size TO n2 DO
-      		 	print(((size * "0")+(1 * " ")+(3 * "*")+(1 * " ")+(size * "0")).center(bottomlevel));
-			size += 1;
-		 FOR size TO n2 DO
-        		print(((size * "0")+(4 * " ")+(5 * "*")+(4 * " ")+(size * "0")).center(bottomlevel));
-			size += 1;
-   		 FOR size TO n3 DO
+			size += 2;
+ 		 FOR size <--1 TO n2 DO
+      		 	print(((size * "0")+(topgarlands * " ")+(3 * "*")+(topgarlands * " ")+(size * "0")).center(bottomlevel));
+			size += 2;
+		 FOR size <--7 TO n2 DO
+        		print(((size * "0")+(middlegarlands * " ")+(5 * "*")+(middlegarlands  * " ")+(size * "0")).center(bottomlevel));
+			size += 4;
+   		 FOR size <--1 TO n3 DO
         		print((size * "*").center(bottomlevel));
-			size += 7;
-		 FOR size TO n4 DO
+			size += 2;
+		 FOR size <--11 TO n4 DO
        		 	print((size * "*").center(bottomlevel));
-			size += 11;
+			size += 6;
 
 	END
 
@@ -55,24 +63,24 @@ INPUT: 3 entier n1,n2,n3
 OUTPUT:Une chaine de symbole représentant le tronc avec les guirlandes
 
 
-PROCEDURE print_trunk(n1,n2,n3)
+FUNCTION trunk(n1,n2,n3)
 
 	VAR
 
 	BEGIN
 
-		FOR size <--1 TO n1 DO
-      		  	print(((bottomgarlands * "| ")+(5 * "*")+(4 * " |")).center(bottomlevel))
-			size += 1;
-		FOR size <--1 TO n2 DO
-      		  	print(((bottomgarlands * "0 ")+(5 * "*")+(4 * " 0")).center(bottomlevel))
-			size += 1;
-		FOR size <--1 TO n3 DO
+		FOR size <--5 TO n1 DO
+      		  	print(((bottomgarlands * "| ")+(5 * "*")+(bottomgarlands * " |")).center(bottomlevel))
+			size += 20;
+		FOR size <--5 TO n2 DO
+      		  	print(((bottomgarlands * "0 ")+(5 * "*")+(bottomgarlands * " 0")).center(bottomlevel))
+			size += 20;
+		FOR size <--5 TO n3 DO
       		  	print((bottomgarlands * "*").center(bottomlevel));
-			size += 1;
+			size += 20;
 
 	END
 
-print_star()
-print_tree(8, 2, 16, 24)
-print_trunk(20,20,20)
+star()
+tree(toplevel, 2, middlelevel, bottomlevel)
+trunk(20)

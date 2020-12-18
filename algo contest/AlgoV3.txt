@@ -7,7 +7,7 @@ OUTPUT:Une chaine de symbole représentant les trois partis du sapin
 //.center permet de centrer la fenêtre
 
 
-PROCEDURE print_tree(n1,n2,n3)
+FUNCTION tree(n1,n2,n3)
 
 	VAR 
 	
@@ -15,21 +15,21 @@ PROCEDURE print_tree(n1,n2,n3)
 	BEGIN
 		FOR size <-- 1 TO n1 DO
 			print ((size * "*").center(23)); 
-			size += 1;
+			size <-- size + 2;
 		FOR size <-- 3 TO n2 DO
 			print ((size * "*").center(23));
-			size += 3;
+			size <-- size + 4;
 		FOR size <-- 5 TO n3 DO
 			print ((size * "*").center(23));
-			size += 5;
+			size <-- size + 6;
 	END
 
-print_tree(8,16,24)
+tree(8,16,24)
 
 INPUT: 3 entier n1,n2,n3
 OUTPUT:Une chaine de symbole représentant les trois partis du sapin ainsi que les guirlandes
 
-PROCEDURE print_trunk(n1,n2,n3)
+FUNCTION trunk(n1,n2,n3)
 
 	VAR 
 	
@@ -37,13 +37,13 @@ PROCEDURE print_trunk(n1,n2,n3)
 	BEGIN
 		FOR size <-- 5 TO n1 DO
 			print(((4 * "| ")+(5 * "*")+(4 * " |")).center(23)); 
-			size += 1;
+			size <-- size + 20;
 		FOR size <-- 5 TO n2 DO
 			print(((4 * "0 ")+(5 * "*")+(4 * " 0")).center(23));
-			size += 1;
-		FOR size <-- 5 TO n3 DO
-			print((5 * "*").center(23));
-			size += 1;
+			size <-- size + 20;
+		FOR size <-- 5 TO n DO
+			print ((5 * "*").center(23)); 
+			size <-- size + 20;
 	END
 
-print_trunk(20,20,20)
+trunk(20,20,20)
